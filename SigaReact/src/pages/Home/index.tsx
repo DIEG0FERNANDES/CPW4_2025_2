@@ -1,4 +1,4 @@
-import { IoArrowUp } from "react-icons/io5";
+import { IoArrowUp, IoImage } from "react-icons/io5";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header/Header";
 import estilos from "./index.module.css";
@@ -11,10 +11,7 @@ const Home = () => {
       <div className={estilos.content}>
         <nav>
           <div className={estilos.perfil}>
-            <img
-              src="../../assets/img/fotos/8ff565410ddbe8a758b5136afb44c74c.jpg"
-              alt=""
-            />
+            <IoImage />
             <a href="">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="">sair</a>
           </div>

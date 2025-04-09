@@ -1,3 +1,4 @@
+import { IoImage } from "react-icons/io5";
 import Header from "../../components/Header/Header";
 import estilos from "./index.module.css";
 
@@ -8,12 +9,10 @@ const Jogo = () => {
       <hr />
       <div className={estilos.content}>
         <nav>
-          <div>
-            <img
-              src="../../assets/img/fotos/8ff565410ddbe8a758b5136afb44c74c.jpg"
-              alt="foto Perfil"
-            />
-            <br />
+          <div className={estilos.perfil}>
+            <IoImage />
+            <a href="">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="">sair</a>
           </div>
           <ul>
             <li>
