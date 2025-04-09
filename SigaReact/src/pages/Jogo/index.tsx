@@ -1,5 +1,5 @@
 import Header from "../../components/Header/Header";
-import estilos from "./index.modules.css";
+import estilos from "./index.module.css";
 
 const Jogo = () => {
   return (
