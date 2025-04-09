@@ -1,0 +1,16 @@
+/* Controla o conteudo da pagina */
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+/* arrow up */
+.irTopo {
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+  color: green;
+}

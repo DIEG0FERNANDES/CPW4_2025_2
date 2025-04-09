@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+nav,
+main,
+section {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+
+nav {
+  flex: 10%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+li:hover {
+  background-color: lightblue;
+}
+
+main {
+  flex: 60%;
+}
+
+section {
+  flex: 20%;
+}
+
+.form > button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1e8f2f;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.button:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,42 @@
+/* Controla o conteudo da pagina */
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* arruma a cetralização de imagem e texto de perfil */
+.perfil {
+  text-align: center;
+}
+.perfil > img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* estiliza as tabelas e seus modulos dentro */
+table {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+tr,
+td,
+th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+/* arrow up */
+.irTopo {
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+  color: green;
+}

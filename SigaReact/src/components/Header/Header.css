@@ -1,0 +1,17 @@
+header {
+  background-color: #0a5517;
+  margin: 0;
+  background-image: radial-gradient(#19882c, #025310);
+  color: white;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  padding: 5%;
+  margin: 0;
+  font-family: "regular";
+}
