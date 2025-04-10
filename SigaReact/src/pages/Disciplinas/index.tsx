@@ -1,5 +1,5 @@
 import Footer from "../../components/Footer";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header";
 import estilos from "./index.module.css";
 
 import { IoArrowUp, IoImage } from "react-icons/io5";
@@ -18,7 +18,7 @@ const Disciplinas = () => {
           </div>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="/Home">Home</a>
             </li>
             <li>
               <a href="/Biblioteca">Biblioteca</a>

@@ -1,5 +1,5 @@
 import { IoArrowUp, IoImage } from "react-icons/io5";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header";
 import estilos from "./index.module.css";
 
 const Biblioteca = () => {
@@ -16,7 +16,7 @@ const Biblioteca = () => {
           </div>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="/Home">Home</a>
             </li>
             <li>
               <a href="/Biblioteca">Biblioteca</a>

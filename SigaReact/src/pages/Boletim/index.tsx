@@ -1,5 +1,5 @@
 import { IoArrowUp, IoImage, IoTrash } from "react-icons/io5";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header";
 
 import estilos from "./index.module.css";
 
@@ -17,7 +17,7 @@ const Boletim = () => {
           </div>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="/Home">Home</a>
             </li>
             <li>
               <a href="/Biblioteca">Biblioteca</a>

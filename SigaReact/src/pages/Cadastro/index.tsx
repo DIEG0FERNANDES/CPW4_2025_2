@@ -1,11 +1,12 @@
 import Footer from "../../components/Footer";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header";
 import estilos from "./index.module.css";
+import { IoArrowUp, IoEye } from "react-icons/io5";
 
 const Index = () => {
   return (
     <>
-      <Header />
+      <Header titulo="" />
       <div className={estilos.content}>
         <nav>
           <ul>
@@ -28,36 +29,33 @@ const Index = () => {
             </p>
             <p>
               Nome:
-              <input type="text" name="" id="" placeholder="nome" />
+              <input type="text" placeholder="nome" />
             </p>
             <p>
               Email:
-              <input type="text" name="" id="" placeholder="e-mail" />
+              <input type="text" placeholder="e-mail" />
             </p>
             <p id="paiSenha1">
               Senha:
-              <input type="password" name="" id="" placeholder="senha" />
+              <input type="password" placeholder="senha" />
+              <IoEye />
             </p>
-            <p id="paiSenha2">
+            <p>
               Repita a senha:
-              <input
-                type="password"
-                name=""
-                id=""
-                placeholder="repita a senha"
-              />
+              <input type="password" placeholder="repita a senha" />
+              <IoEye />
             </p>
             <p>
               Foto:
-              <input type="file" name="" id="" />
+              <input type="file" />
             </p>
             <p>
               CPF (somente números):
-              <input type="number" name="" id="" placeholder="CPF" />
+              <input type="number" placeholder="CPF" />
             </p>
             <p>
               Data de nascimento (dd/mm/aaaa)
-              <input type="date" name="" id="" />
+              <input type="date" />
             </p>
 
             <button type="submit" className={estilos.button}>
@@ -70,6 +68,9 @@ const Index = () => {
           <p>Aberto processo seletivo</p>
         </section>
       </div>
+      <a href="#">
+        <IoArrowUp className={estilos.irTopo} />
+      </a>
       <Footer />
     </>
   );

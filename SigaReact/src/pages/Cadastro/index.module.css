@@ -1,25 +1,20 @@
-body {
-  margin: 0;
+/* arrow up */
+.irTopo {
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+  color: green;
 }
-
+/* Estilização do conteudo da pagina */
 .content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
 }
-
-nav,
-main,
-section {
-  border-color: black;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 5px;
-}
-
+/* estilização do menu */
 nav {
   flex: 10%;
 }
@@ -40,13 +35,21 @@ li {
 li:hover {
   background-color: lightblue;
 }
-
-main {
-  flex: 60%;
+/* estilização padrao do menu, formulario e seção do conteudo da pagina  */
+nav,
+main,
+section {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
 }
 
-section {
-  flex: 20%;
+/* estilização do formulario */
+main {
+  flex: 60%;
 }
 
 .form > button {
@@ -61,4 +64,8 @@ section {
 
 .button:hover {
   cursor: pointer;
+}
+/* estilização da seçao */
+section {
+  flex: 20%;
 }

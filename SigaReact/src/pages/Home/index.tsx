@@ -1,6 +1,6 @@
 import { IoArrowUp, IoImage } from "react-icons/io5";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header";
 import estilos from "./index.module.css";
 
 const Home = () => {
@@ -11,13 +11,13 @@ const Home = () => {
       <div className={estilos.content}>
         <nav>
           <div className={estilos.perfil}>
-            <IoImage />
-            <a href="">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="">sair</a>
+            <IoImage className={estilos.foto} />
+            <a href="/">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="/">sair</a>
           </div>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="/Home">Home</a>
             </li>
             <li>
               <a href="/Biblioteca">Biblioteca</a>
