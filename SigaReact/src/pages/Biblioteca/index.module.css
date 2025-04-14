@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: stretch;
 }
-/* arruma a cetralização de imagem e texto de perfil */
+/* controla estilização do perfil */
 .perfil {
   text-align: center;
 }
@@ -13,6 +13,13 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
+}
+.foto {
+  font-size: 100px;
+  padding: 5px;
+  background-color: #474747;
+  border: 1px solid #000;
+  border-radius: 60px;
 }
 /* arrow up */
 .irTopo {
@@ -23,7 +30,6 @@
   position: fixed;
   color: green;
 }
-
 /* responsividade da pagina */
 @media (max-width: 768px) {
   .content {

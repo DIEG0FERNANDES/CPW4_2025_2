@@ -12,8 +12,10 @@ const Home = () => {
         <nav>
           <div className={estilos.perfil}>
             <IoImage className={estilos.foto} />
-            <a href="/">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="/">sair</a>
+            <div>
+              <a href="/">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+              <a href="/">sair</a>
+            </div>
           </div>
           <ul>
             <li>

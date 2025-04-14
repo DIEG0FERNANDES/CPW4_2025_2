@@ -10,9 +10,11 @@ const Biblioteca = () => {
       <div className={estilos.content}>
         <nav>
           <div className={estilos.perfil}>
-            <IoImage />
-            <a href="">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="">sair</a>
+            <IoImage className={estilos.foto} />
+            <div>
+              <a href="/">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+              <a href="/">sair</a>
+            </div>
           </div>
           <ul>
             <li>

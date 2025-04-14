@@ -1,6 +1,7 @@
 import { IoImage } from "react-icons/io5";
 import Header from "../../components/Header";
 import estilos from "./index.module.css";
+import Tabuleiro from "../../components/Tabuleiro";
 
 const Jogo = () => {
   return (
@@ -10,9 +11,11 @@ const Jogo = () => {
       <div className={estilos.content}>
         <nav>
           <div className={estilos.perfil}>
-            <IoImage />
-            <a href="">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="">sair</a>
+            <IoImage className={estilos.foto} />
+            <div>
+              <a href="/">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+              <a href="/">sair</a>
+            </div>
           </div>
           <ul>
             <li>
@@ -34,38 +37,7 @@ const Jogo = () => {
         </nav>
 
         <main>
-          <h1>Vamos Jogar uma Partida</h1>
-          <form id="fleex">
-            <div>
-              Player 1:
-              <input type="text" data-player1 />
-            </div>
-            <div>
-              {" "}
-              Player 2:
-              <input type="text" data-player2 />
-            </div>
-            <button type="submit">Save</button>
-          </form>
-          <button>Jogar</button>
-
-          <div data-jogo>
-            <div data-tabuleiro>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div id="vencedor"></div>
-            <div>
-              <button>Reset</button>
-            </div>
-          </div>
+          <Tabuleiro />
         </main>
       </div>
       <footer>
