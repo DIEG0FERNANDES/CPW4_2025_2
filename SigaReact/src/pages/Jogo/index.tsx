@@ -1,7 +1,7 @@
-import { IoImage } from "react-icons/io5";
-import Header from "../../components/Header";
+import { IoImage, IoArrowUp } from "react-icons/io5";
+import { Header, Nav, Footer } from "../../components";
 import estilos from "./index.module.css";
-import Tabuleiro from "../../components/Tabuleiro";
+import Tabuleiro from "../../components/ui/Tabuleiro";
 
 const Jogo = () => {
   return (
@@ -9,42 +9,18 @@ const Jogo = () => {
       <Header titulo=" - Jogo da Velha" />
       <hr />
       <div className={estilos.content}>
-        <nav>
-          <div className={estilos.perfil}>
-            <IoImage className={estilos.foto} />
-            <div>
-              <a href="/">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-              <a href="/">sair</a>
-            </div>
-          </div>
-          <ul>
-            <li>
-              <a href="/Home">Home</a>
-            </li>
-            <li>
-              <a href="/Biblioteca">Biblioteca</a>
-            </li>
-            <li>
-              <a href="/Disciplinas">Disciplinas</a>
-            </li>
-            <li>
-              <a href="/Boletim">Boletim</a>
-            </li>
-            <li>
-              <a href="/Jogo">Jogar</a>
-            </li>
-          </ul>
-        </nav>
-
+        <Nav />
         <main>
+          <h2>Jogo da Velha</h2>
           <Tabuleiro />
         </main>
       </div>
-      <footer>
-        <hr />
-        <p>&copy;Todos os direitos reservados;</p>
-      </footer>
+      <a href="#" aria-label="Ir para o topo">
+        <IoArrowUp className={estilos.irTopo} />
+      </a>
+      <Footer />
     </>
   );
 };
+
 export default Jogo;

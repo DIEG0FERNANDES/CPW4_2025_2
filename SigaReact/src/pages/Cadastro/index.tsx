@@ -1,79 +1,89 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import estilos from "./index.module.css";
-import { IoArrowUp, IoEye } from "react-icons/io5";
+import { IoArrowUp } from "react-icons/io5";
+import { Footer, Header, Input, Nav } from "../../components";
+import Container from "../../components/layout/Container";
 
-const Index = () => {
+// importação de estilização
+import "../../styles/_global.css";
+import estilos from "./index.module.css";
+const Cadastro = () => {
   return (
     <>
-      <Header titulo="" />
-      <div className={estilos.content}>
-        <nav>
-          <ul>
-            <li>
-              <a href="http://www.ifms.edu.br/">Site do IFMS</a>
-            </li>
-          </ul>
-        </nav>
-
+      <Header />
+      <Container className={estilos.content}>
+        <Nav />
         <main>
           <h2>Cadastre-se</h2>
-
-          <form className={estilos.form}>
+          <form>
             <p>
-              Cadastre-se como
-              <select>
+              <label htmlFor="perfil">Cadastre-se como:</label>
+              <select id="perfil" name="perfil">
+                <option value="" disabled selected>
+                  Selecione...
+                </option>
                 <option value="estudante">Estudante</option>
                 <option value="professor">Professor</option>
               </select>
             </p>
             <p>
-              Nome:
-              <input type="text" placeholder="nome" />
+              <label htmlFor="nome">Nome: </label>
+              <Input type="text" name="nome" placeholder="nome" required />
             </p>
             <p>
-              Email:
-              <input type="text" placeholder="e-mail" />
+              <label htmlFor="email">E-Mail: </label>
+              <Input type="email" name="email" placeholder="e-mail" required />
             </p>
             <p id="paiSenha1">
-              Senha:
-              <input type="password" placeholder="senha" />
-              <IoEye />
+              <label htmlFor="senha">Senha: </label>
+              <Input
+                type="password"
+                id="senha1"
+                name="senha"
+                placeholder="senha"
+                required
+              />
+            </p>
+            <p id="paiSenha2">
+              <label htmlFor="confirmarSenha">Repita a senha: </label>
+              <Input
+                type="password"
+                id="senha2"
+                name="confirmarSenha"
+                placeholder="repita a senha"
+                required
+              />
             </p>
             <p>
-              Repita a senha:
-              <input type="password" placeholder="repita a senha" />
-              <IoEye />
+              <label htmlFor="foto">Foto: </label>
+              <Input type="file" name="foto" />
             </p>
             <p>
-              Foto:
-              <input type="file" />
+              <label htmlFor="cpf">CPF (somente números):</label>
+              <input
+                type="tel"
+                id="cpf"
+                name="cpf"
+                placeholder="CPF"
+                pattern="\d{11}"
+                required
+              />
             </p>
             <p>
-              CPF (somente números):
-              <input type="number" placeholder="CPF" />
+              <label htmlFor="nascimento">Data de nascimento:</label>
+              <input type="date" id="nascimento" name="nascimento" required />
             </p>
-            <p>
-              Data de nascimento (dd/mm/aaaa)
-              <input type="date" />
-            </p>
-
-            <button type="submit" className={estilos.button}>
-              Cadastrar
-            </button>
           </form>
         </main>
         <section>
           <h2>Últimas notícias</h2>
           <p>Aberto processo seletivo</p>
         </section>
-      </div>
-      <a href="#">
-        <IoArrowUp className={estilos.irTopo} />
+      </Container>
+      <a href="#" aria-label="Ir para o topo">
+        <IoArrowUp className="irTopo" />
       </a>
       <Footer />
     </>
   );
 };
 
-export default Index;
+export default Cadastro;

@@ -1,6 +1,5 @@
-import { IoArrowUp, IoImage } from "react-icons/io5";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import { IoArrowUp } from "react-icons/io5";
+import { Footer, Header, Nav } from "../../components";
 import estilos from "./index.module.css";
 
 const Home = () => {
@@ -9,32 +8,7 @@ const Home = () => {
       <Header titulo="" />
       <hr />
       <div className={estilos.content}>
-        <nav>
-          <div className={estilos.perfil}>
-            <IoImage className={estilos.foto} />
-            <div>
-              <a href="/">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-              <a href="/">sair</a>
-            </div>
-          </div>
-          <ul>
-            <li>
-              <a href="/Home">Home</a>
-            </li>
-            <li>
-              <a href="/Biblioteca">Biblioteca</a>
-            </li>
-            <li>
-              <a href="/Disciplinas">Disciplinas</a>
-            </li>
-            <li>
-              <a href="/Boletim">Boletim</a>
-            </li>
-            <li>
-              <a href="/Jogo">Jogar</a>
-            </li>
-          </ul>
-        </nav>
+        <Nav /> {/* Utilizando o componente de navegação já criado */}
         <main>
           <h2>Olá, Diego</h2>
           <p>Prezado(a) Diego,</p>
@@ -55,38 +29,26 @@ const Home = () => {
             abaixo do texto “Sistema Acadêmico”.
           </p>
           <p>
-            No menu "
-            <a href="/Disciplinas" className="">
-              Disciplinas
-            </a>
-            " você verá a relação de todas as unidades que está matriculado no
-            semestre atual. Clicando sobre o nome de cada uma, você verá os
-            horários de permanência do(a) professor(a) e os horários e locais de
-            aula.
+            No menu "<a href="/Disciplinas">Disciplinas</a>" você verá a relação
+            de todas as unidades que está matriculado no semestre atual.
+            Clicando sobre o nome de cada uma, você verá os horários de
+            permanência do(a) professor(a) e os horários e locais de aula.
           </p>
           <p>
-            No menu "
-            <a href="notas.html" className="">
-              Notas
-            </a>
-            " você conseguirá visualizar todas as notas já lançadas, tanto das
-            unidades atuais quanto daquelas de semestres anteriores e a
-            quantidade de faltas em cada uma delas
+            No menu "<a href="notas.html">Notas</a>" você conseguirá visualizar
+            todas as notas já lançadas, tanto das unidades atuais quanto das de
+            semestres anteriores, além da quantidade de faltas.
           </p>
           <p>
-            Já em "
-            <a href="/Boletim" className="">
-              Boletim
-            </a>
-            " você conseguirá verificar, além de sua nota, o número de faltas e
-            o percentual que elas representam. Lembre-se que deve ter pelo menos
-            75% de frequência.
+            Já em "<a href="/Boletim">Boletim</a>" você conseguirá verificar,
+            além de sua nota, o número de faltas e o percentual que elas
+            representam. Lembre-se de que deve ter pelo menos 75% de frequência.
           </p>
           <p>
             Em um futuro próximo, novas funcionalidades serão disponibilizadas
             na Área do Estudante, como solicitação de rematrícula, acesso ao
-            plano de ensino do professor, à matriz curricular do curso, gerar
-            atestado de matrícula, acesso ao histórico escolar, entre outras.
+            plano de ensino do professor, matriz curricular do curso, atestado
+            de matrícula, histórico escolar, entre outras.
           </p>
           <p>Fique à vontade para dar sugestões para melhoria desse espaço.</p>
           <p>Aproveitem!</p>
@@ -94,10 +56,12 @@ const Home = () => {
         </main>
         <section>
           <h2>Últimas notícias</h2>
-          <p>Aberto processo seletivo</p>
+          <ul>
+            <li>Aberto processo seletivo</li>
+          </ul>
         </section>
       </div>
-      <a href="#">
+      <a href="#" aria-label="Ir para o topo">
         <IoArrowUp className={estilos.irTopo} />
       </a>
       <Footer />

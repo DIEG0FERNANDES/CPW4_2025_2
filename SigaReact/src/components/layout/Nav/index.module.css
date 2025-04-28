@@ -1,0 +1,59 @@
+@import "../../../styles/_variables.css";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-small);
+  background-color: var(--background-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* Estilização do perfil */
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: var(--margin-small);
+}
+
+.foto {
+  font-size: 100px;
+  padding: 5px;
+  background-color: #474747;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+}
+
+/* Links do perfil */
+.perfil-links {
+  display: flex;
+  gap: var(--margin-small);
+}
+
+.separator {
+  margin: 0 var(--margin-small);
+  color: var(--text-color);
+}
+
+/* Estilização da navegação */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: var(--margin-medium);
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #000;
+}

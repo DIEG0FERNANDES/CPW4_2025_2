@@ -1,0 +1,43 @@
+@import "../../../styles/_variables.css";
+
+.header {
+  background-color: var(--primary-color);
+  background-image: radial-gradient(
+    var(--secondary-color),
+    var(--accent-color)
+  );
+  color: var(--text-light);
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-medium);
+  height: 174px;
+}
+
+.login {
+  align-self: flex-end;
+  padding: 10px;
+  font-size: 1.5rem;
+  /* align-items: center;
+  gap: var(--margin-small); */
+}
+
+.senhaButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: var(--font-size-medium);
+  cursor: pointer;
+}
+
+.button {
+  padding: var(--padding-small);
+  border-radius: var(--border-radius);
+  background-color: var(--button-color);
+  color: white;
+  font-weight: bold;
+  font-size: var(--font-size-medium);
+  cursor: pointer;
+}

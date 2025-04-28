@@ -1,134 +1,55 @@
-import { IoArrowUp, IoImage, IoTrash } from "react-icons/io5";
-import Header from "../../components/Header";
-
+import { IoArrowUp } from "react-icons/io5";
+import { Header, Nav, Footer } from "../../components";
+import TabelaBoletim from "../../components/ui/TabelaBoletim";
 import estilos from "./index.module.css";
 
 const Boletim = () => {
+  const disciplinas = [
+    {
+      nome: "Projeto e Design",
+      professor: "Camila",
+      cargaHoraria: 75,
+      aulas: 100,
+      faltas: 0,
+      percentualFaltas: "0%",
+      n1: 0,
+      n2: 0,
+      media: 0,
+      situacao: "EM CURSO",
+      id: 12,
+    },
+    {
+      nome: "Dispositivos Móveis",
+      professor: "Túlio",
+      cargaHoraria: 80,
+      aulas: 100,
+      faltas: 25,
+      percentualFaltas: "25%",
+      n1: 5,
+      n2: 5,
+      media: 5,
+      situacao: "REPROVADO",
+      id: 13,
+    },
+  ];
+
   return (
     <>
       <Header titulo=" - Boletim" />
       <hr />
       <div className={estilos.content}>
-        <nav>
-          <div className={estilos.perfil}>
-            <IoImage className={estilos.foto} />
-            <div>
-              <a href="/">conta</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-              <a href="/">sair</a>
-            </div>
-          </div>
-          <ul>
-            <li>
-              <a href="/Home">Home</a>
-            </li>
-            <li>
-              <a href="/Biblioteca">Biblioteca</a>
-            </li>
-            <li>
-              <a href="/Disciplinas">Disciplinas</a>
-            </li>
-            <li>
-              <a href="/Boletim">Boletim</a>
-            </li>
-            <li>
-              <a href="/Jogo">Jogar</a>
-            </li>
-          </ul>
-        </nav>
+        <Nav />
         <main>
-          <table>
-            <tbody>
-              <tr>
-                <th>Estudante:</th>
-                <td>Camila</td>
-                <th>RA:</th>
-                <td>5555</td>
-              </tr>
-            </tbody>
-          </table>
-          <table>
-            <tbody>
-              <tr>
-                <th>Unidade Curricular</th>
-                <th>CH</th>
-                <th>Aulas</th>
-                <th>Total Faltas</th>
-                <th>% Faltas</th>
-                <th>N1</th>
-                <th>N2</th>
-                <th>Média</th>
-                <th>Situação</th>
-                <th>Opções</th>
-              </tr>
-              <tr>
-                <td>
-                  Projeto e Design
-                  <br />
-                  <small>Camila </small>
-                </td>
-                <td>75 </td>
-                <td>100 </td>
-                <td>0 </td>
-                <td>0%</td>
-                <td>0 </td>
-                <td>0 </td>
-                <td>0 </td>
-                <td>EM CURSO </td>
-                <td>
-                  <a href="excluirMatricula.php?id_d=12&id_u=16">
-                    <IoTrash />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  EXEMPLO Dispositivos Móveis <br />
-                  <small>Túlio</small>
-                </td>
-                <td>80</td>
-                <td>100</td>
-                <td>25</td>
-                <td>25%</td>
-                <td>5</td>
-                <td>5</td>
-                <td>5</td>
-                <td>REPROVADO</td>
-                <td>
-                  <IoTrash />
-                </td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td>
-                  <small>
-                    <strong>Legenda:</strong>
-                    <br />
-                    <small>
-                      <strong>CH/Aulas: </strong>Carga horária da Unidade
-                      Curricular em horas / Quantidade de aulas ou encontros
-                      presenciais previstos.
-                    </small>
-                  </small>
-                  <p>
-                    *Esses registros podem sofrer alterações até o final do
-                    periodo letivo.
-                  </p>
-                </td>
-              </tr>
-            </tfoot>
-          </table>
+          <h2>Boletim</h2>
+          <TabelaBoletim disciplinas={disciplinas} />
         </main>
       </div>
-      <a href="#">
+      <a href="#" aria-label="Ir para o topo">
         <IoArrowUp className={estilos.irTopo} />
       </a>
-      <footer>
-        <hr />
-        <button>Voltar</button>
-        <p>&copy;Todos os direitos reservados;</p>
-      </footer>
+      <Footer />
     </>
   );
 };
+
 export default Boletim;

@@ -1,0 +1,10 @@
+.tabuleiro {
+  margin: 0 auto;
+  width: 320px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}

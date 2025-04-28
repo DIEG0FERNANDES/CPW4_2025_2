@@ -1,0 +1,55 @@
+.celula {
+  position: relative;
+  background-color: green;
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.celula.xis::before,
+.celula.xis::after {
+  content: "";
+  height: 15px;
+  width: 90px;
+  background: white;
+  position: absolute;
+  top: 45%;
+  left: 1%;
+}
+
+.celula.xis::before {
+  transform: rotate(45deg);
+}
+
+.celula.xis::after {
+  transform: rotate(-45deg);
+}
+
+/* circulo */
+.celula.circulo::before,
+.celula.circulo::after {
+  content: "";
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 70px;
+  width: 70px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  left: 1%;
+}
+
+.celula.hoverDoCirculo:not(.xis):not(.circulo):hover::after {
+  content: "O";
+  position: absolute;
+  left: 10%;
+  font-size: 80px;
+}
+.celula.hoverDoXis:not(.xis):not(.circulo):hover::after {
+  content: "X";
+  position: absolute;
+  left: 15px;
+  bottom: 0%;
+  font-size: 80px;
+}

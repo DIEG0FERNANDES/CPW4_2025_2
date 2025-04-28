@@ -1,0 +1,37 @@
+/* centralização flexivel */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* alinhamento vertical */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* botao estilizado */
+.btn {
+  padding: var(--padding-small);
+  border-radius: var(--border-radius);
+  background-color: var(--button-color);
+  color: white;
+  font-weight: bold;
+  font-size: var(--font-size-medium);
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--hover-button-color);
+  cursor: pointer;
+}
+
+/* cartao */
+.card {
+  padding: var(--padding-medium);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
